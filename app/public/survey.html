@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <!-- meta tags -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- title -->
+    <title>Friend Finder - Survey</title>
+
+    <!-- viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- css -->
+    <!-- reset -->
+    <link rel="stylesheet" type="text/css" href="reset.css" />
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <!-- external stylesheet-->
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+
+    <!-- jquery-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="row">
+
+            <!-- whitespace -->
+            <div class="col-lg-2"></div>
+
+            <!-- quiz -->
+            <div class="col-lg-8">
+                <div class="card">
+
+                    <form action="POST">
+
+                        <!-- question 1-->
+                        <div class="form-group">
+                            <!-- text -->
+                            <h4 id="survey-question">I see myself as extraverted, enthusiastic.</h4>
+                            <!-- options -->
+                            <select class="form-control form-control-sm" name="q1">
+                                <option value="1">Strongly Disagree</option>
+                                <option value="2">Disagree</option>
+                                <option value="3">Neither Agree nor Disagree</option>
+                                <option value="4">Agree</option>
+                                <option value="5">Strongly Agree</option>
+                            </select>
+                        </div>
+
+                        <!-- question 2-->
+                        <div class="form-group">
+                            <!-- text -->
+                            <h4 id="survey-question">I see myself as critical, quarrelsome.</h4>
+                            <!-- options -->
+                            <select class="form-control form-control-sm">
+                                <option name="choice" value="1">Strongly Disagree</option>
+                                <option name="choice" value="2">Disagree</option>
+                                <option name="choice" value="3">Neither Agree nor Disagree</option>
+                                <option name="choice" value="4">Agree</option>
+                                <option name="choice" value="5">Strongly Agree</option>
+                            </select>
+                        </div>
+
+                        <!-- question 3 -->
+                        <div class="form-group">
+                            <!-- text -->
+                            <h4 id="survey-question">I see myself as dependable, self-disciplined.</h4>
+                            <!-- options -->
+                            <select class="form-control form-control-sm">
+                                <option name="choice" value="1">Strongly Disagree</option>
+                                <option name="choice" value="2">Disagree</option>
+                                <option name="choice" value="3">Neither Agree nor Disagree</option>
+                                <option name="choice" value="4">Agree</option>
+                                <option name="choice" value="5">Strongly Agree</option>
+                            </select>
+                        </div>
+
+                        <!-- question 4 -->
+                        <div class="form-group">
+                            <!-- text -->
+                            <h4 id="survey-question">I see myself as anxious, easily upset.</h4>
+                            <!-- options -->
+                            <select class="form-control form-control-sm">
+                                <option name="choice" value="1">Strongly Disagree</option>
+                                <option name="choice" value="2">Disagree</option>
+                                <option name="choice" value="3">Neither Agree nor Disagree</option>
+                                <option name="choice" value="4">Agree</option>
+                                <option name="choice" value="5">Strongly Agree</option>
+                            </select>
+                        </div>
+
+                        <!-- question 5 -->
+                        <div class="form-group">
+                            <!-- text -->
+                            <h4 id="survey-question">I see myself as open to new experiences, complex.</h4>
+                            <!-- options -->
+                            <select class="form-control form-control-sm">
+                                <option name="choice" value="1">Strongly Disagree</option>
+                                <option name="choice" value="2">Disagree</option>
+                                <option name="choice" value="3">Neither Agree nor Disagree</option>
+                                <option name="choice" value="4">Agree</option>
+                                <option name="choice" value="5">Strongly Agree</option>
+                            </select>
+                        </div>
+
+                        <!-- question 6 -->
+                        <div class="form-group">
+                            <!-- text -->
+                            <h4 id="survey-question">I see myself as reserved, quiet.</h4>
+                            <!-- options -->
+                            <select class="form-control form-control-sm">
+                                <option name="choice" value="1">Strongly Disagree</option>
+                                <option name="choice" value="2">Disagree</option>
+                                <option name="choice" value="3">Neither Agree nor Disagree</option>
+                                <option name="choice" value="4">Agree</option>
+                                <option name="choice" value="5">Strongly Agree</option>
+                            </select>
+                        </div>
+
+                        <!-- question 7 -->
+                        <div class="form-group">
+                            <!-- text -->
+                            <h4 id="survey-question">I see myself as sympathetic, warm.</h4>
+                            <!-- options -->
+                            <select class="form-control form-control-sm">
+                                <option name="choice" value="1">Strongly Disagree</option>
+                                <option name="choice" value="2">Disagree</option>
+                                <option name="choice" value="3">Neither Agree nor Disagree</option>
+                                <option name="choice" value="4">Agree</option>
+                                <option name="choice" value="5">Strongly Agree</option>
+                            </select>
+                        </div>
+
+                        <!-- question 8 -->
+                        <div class="form-group">
+                            <!-- text -->
+                            <h4 id="survey-question">I see myself as disorganized, careless.</h4>
+                            <!-- options -->
+                            <select class="form-control form-control-sm">
+                                <option name="choice" value="1">Strongly Disagree</option>
+                                <option name="choice" value="2">Disagree</option>
+                                <option name="choice" value="3">Neither Agree nor Disagree</option>
+                                <option name="choice" value="4">Agree</option>
+                                <option name="choice" value="5">Strongly Agree</option>
+                            </select>
+                        </div>
+
+                        <!-- question 9 -->
+                        <div class="form-group">
+                            <!-- text -->
+                            <h4 id="survey-question">I see myself as calm, emotionally stable.</h4>
+                            <!-- options -->
+                            <select class="form-control form-control-sm">
+                                <option name="choice" value="1">Strongly Disagree</option>
+                                <option name="choice" value="2">Disagree</option>
+                                <option name="choice" value="3">Neither Agree nor Disagree</option>
+                                <option name="choice" value="4">Agree</option>
+                                <option name="choice" value="5">Strongly Agree</option>
+                            </select>
+                        </div>
+
+                        <!-- question 10 -->
+                        <div class="form-group">
+                            <!-- text -->
+                            <h4 id="survey-question">I see myself as conventional, uncreative.</h4>
+                            <!-- options -->
+                            <select class="form-control form-control-sm">
+                                <option name="choice" value="1">Strongly Disagree</option>
+                                <option name="choice" value="2">Disagree</option>
+                                <option name="choice" value="3">Neither Agree nor Disagree</option>
+                                <option name="choice" value="4">Agree</option>
+                                <option name="choice" value="5">Strongly Agree</option>
+                            </select>
+                        </div>
+
+                        <!-- submit -->
+                        <button type="submit" class="btn btn-primary" id="submit">Submit</button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+            <!-- whitespace -->
+            <div class="col-lg-2"></div>
+
+        </div>
+
+    </div>
+
+    <!-- javascript -->
+    <script src="apiRoutes.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

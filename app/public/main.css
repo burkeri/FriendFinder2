@@ -1,0 +1,19 @@
+body {
+    background-color: coral;
+}
+
+#start-pg {
+    max-width: 100%;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, .5);
+    padding: 10%;
+    text-align-last: center;
+    margin: 10% 0 10% 0;
+    border: none;
+}
+
+.form-group {
+    margin: 8% 0 8% 0;
+}
