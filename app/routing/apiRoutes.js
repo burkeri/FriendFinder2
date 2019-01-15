@@ -12,15 +12,15 @@ module.exports = function(app) {
         // convert form data into object and add to data
         var newFriend = req.body;
         friends.push(newFriend);
+        console.log("server: " + JSON.stringify(newFriend));
 
-        // find the best match
-        var diff = [];
-
-        for (i=0; friends.length; i++) {
-            // subtract the values in each array
-            // and push subtracted values into new array
-            
-            
+        var data = {
+            name: "p",
+            photo: "p",
+            answers: ["p", "p"]
         }
-    })
+
+        res.send(data);
+
+    });
 };

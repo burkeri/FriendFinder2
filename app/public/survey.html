@@ -21,10 +21,6 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <!-- external stylesheet-->
     <link rel="stylesheet" type="text/css" media="screen" href="./style.css" />
-
-    <!-- jquery-->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-
 </head>
 
 <body>
@@ -54,7 +50,7 @@
                             <!-- text -->
                             <h4 id="survey-question">I see myself as extraverted, enthusiastic.</h4>
                             <!-- options -->
-                            <select class="form-control form-control-sm" name="q1">
+                            <select class="form-control form-control-sm" id="q1">
                                 <option value="1">Strongly Disagree</option>
                                 <option value="2">Disagree</option>
                                 <option value="3">Neither Agree nor Disagree</option>
@@ -68,7 +64,7 @@
                             <!-- text -->
                             <h4 id="survey-question">I see myself as critical, quarrelsome.</h4>
                             <!-- options -->
-                            <select class="form-control form-control-sm">
+                            <select class="form-control form-control-sm" id="q2">
                                 <option name="choice" value="1">Strongly Disagree</option>
                                 <option name="choice" value="2">Disagree</option>
                                 <option name="choice" value="3">Neither Agree nor Disagree</option>
@@ -82,7 +78,7 @@
                             <!-- text -->
                             <h4 id="survey-question">I see myself as dependable, self-disciplined.</h4>
                             <!-- options -->
-                            <select class="form-control form-control-sm">
+                            <select class="form-control form-control-sm" id="q3">
                                 <option name="choice" value="1">Strongly Disagree</option>
                                 <option name="choice" value="2">Disagree</option>
                                 <option name="choice" value="3">Neither Agree nor Disagree</option>
@@ -96,7 +92,7 @@
                             <!-- text -->
                             <h4 id="survey-question">I see myself as anxious, easily upset.</h4>
                             <!-- options -->
-                            <select class="form-control form-control-sm">
+                            <select class="form-control form-control-sm" id="q4">
                                 <option name="choice" value="1">Strongly Disagree</option>
                                 <option name="choice" value="2">Disagree</option>
                                 <option name="choice" value="3">Neither Agree nor Disagree</option>
@@ -110,7 +106,7 @@
                             <!-- text -->
                             <h4 id="survey-question">I see myself as open to new experiences, complex.</h4>
                             <!-- options -->
-                            <select class="form-control form-control-sm">
+                            <select class="form-control form-control-sm" id="q5">
                                 <option name="choice" value="1">Strongly Disagree</option>
                                 <option name="choice" value="2">Disagree</option>
                                 <option name="choice" value="3">Neither Agree nor Disagree</option>
@@ -124,7 +120,7 @@
                             <!-- text -->
                             <h4 id="survey-question">I see myself as reserved, quiet.</h4>
                             <!-- options -->
-                            <select class="form-control form-control-sm">
+                            <select class="form-control form-control-sm" id="q6">
                                 <option name="choice" value="1">Strongly Disagree</option>
                                 <option name="choice" value="2">Disagree</option>
                                 <option name="choice" value="3">Neither Agree nor Disagree</option>
@@ -138,7 +134,7 @@
                             <!-- text -->
                             <h4 id="survey-question">I see myself as sympathetic, warm.</h4>
                             <!-- options -->
-                            <select class="form-control form-control-sm">
+                            <select class="form-control form-control-sm" id="q7">
                                 <option name="choice" value="1">Strongly Disagree</option>
                                 <option name="choice" value="2">Disagree</option>
                                 <option name="choice" value="3">Neither Agree nor Disagree</option>
@@ -152,7 +148,7 @@
                             <!-- text -->
                             <h4 id="survey-question">I see myself as disorganized, careless.</h4>
                             <!-- options -->
-                            <select class="form-control form-control-sm">
+                            <select class="form-control form-control-sm" id="q8">
                                 <option name="choice" value="1">Strongly Disagree</option>
                                 <option name="choice" value="2">Disagree</option>
                                 <option name="choice" value="3">Neither Agree nor Disagree</option>
@@ -166,7 +162,7 @@
                             <!-- text -->
                             <h4 id="survey-question">I see myself as calm, emotionally stable.</h4>
                             <!-- options -->
-                            <select class="form-control form-control-sm">
+                            <select class="form-control form-control-sm" id="q9">
                                 <option name="choice" value="1">Strongly Disagree</option>
                                 <option name="choice" value="2">Disagree</option>
                                 <option name="choice" value="3">Neither Agree nor Disagree</option>
@@ -180,7 +176,7 @@
                             <!-- text -->
                             <h4 id="survey-question">I see myself as conventional, uncreative.</h4>
                             <!-- options -->
-                            <select class="form-control form-control-sm">
+                            <select class="form-control form-control-sm" id="q10">
                                 <option name="choice" value="1">Strongly Disagree</option>
                                 <option name="choice" value="2">Disagree</option>
                                 <option name="choice" value="3">Neither Agree nor Disagree</option>
@@ -204,9 +200,13 @@
         </div>
 
     </div>
-
+ <!-- jquery-->
+ <script
+ src="https://code.jquery.com/jquery-3.3.1.js"
+ integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+ crossorigin="anonymous"></script>
     <!-- javascript -->
-    <script src="apiRoutes.js"></script>
+    <!-- <script src="apiRoutes.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 
@@ -223,24 +223,27 @@
     -->
 
     <script>
-        $("#submit").click(function(e){
+        $("#submit").on("click", function(e){
             e.preventDefault();
 
             // create newFreind obj from form
             var newFriend = {
-                name: nameInput,
-                photo: imageInput,
-                answers: [q1, q2, q3, q4, q5, q6, q7, q8, q9, q10]
+                name: $("#nameInput").val(),
+                photo: $("#imageInput").val(),
+                answers: []
             };
 
-            // post form data to server
-            $.post("api/friends", newFriend, function (data) {
+            for (i=1; i<=10; i++) {
+                newFriend.answers.push($(`#q${i}`).val());
+            }
+            console.log("line 239 " + JSON.stringify(newFriend));
+
+            $.post("/api/friends", newFriend, function(data){
                 
-                // return the best match data, and put in modal
-                $().text(data.name);
-                $().attr("src", data.photo);
-                $().modal("toggle");
+                console.log("data: " + JSON.stringify(data));
+                
             });
+
         });
     </script>
 
