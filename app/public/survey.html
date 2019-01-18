@@ -163,11 +163,11 @@
                             <h4 id="survey-question">I see myself as calm, emotionally stable.</h4>
                             <!-- options -->
                             <select class="form-control form-control-sm" id="q9">
-                                <option name="choice" value="1">Strongly Disagree</option>
-                                <option name="choice" value="2">Disagree</option>
-                                <option name="choice" value="3">Neither Agree nor Disagree</option>
-                                <option name="choice" value="4">Agree</option>
-                                <option name="choice" value="5">Strongly Agree</option>
+                                <option name="choice" value=1>Strongly Disagree</option>
+                                <option name="choice" value=2>Disagree</option>
+                                <option name="choice" value=3>Neither Agree nor Disagree</option>
+                                <option name="choice" value=4>Agree</option>
+                                <option name="choice" value=5>Strongly Agree</option>
                             </select>
                         </div>
 
@@ -189,6 +189,19 @@
                         <button type="submit" class="btn btn-primary" id="submit">Submit</button>
 
                     </form>
+
+                    <!-- modal -->
+                    <div class="modal fade" id="best-match">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h2>Your new friend!</h2>
+                                <h3 id="best-match-name"></h3>  
+                            </div>
+                            <div class="modal-body">
+                                <img id="best-match-pic" style="width: 20%">
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
 
@@ -234,14 +247,21 @@
             };
 
             for (i=1; i<=10; i++) {
-                newFriend.answers.push($(`#q${i}`).val());
+                var val = parseFloat($(`#q${i}`).val());
+                newFriend.answers.push(val);
             }
+
             console.log("line 239 " + JSON.stringify(newFriend));
 
             $.post("/api/friends", newFriend, function(data){
                 
                 console.log("data: " + JSON.stringify(data));
-                
+
+                $("#best-match-name").text(data.name);
+                $("#best-match-pic").attr("src", data.photo);
+
+                $("#best-match").modal("toggle");
+
             });
 
         });
